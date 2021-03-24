@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+    <title>Memory Game</title>
+  </head>  
+  <body>
+    
+    <h1>Light and Sound Memory Game</h1>
+    
+    <p>
+      Play the notes in the correct order to win!
+    </p>
+    <div id="startStopBtn">
+      
+    <button id ="startBtn" onclick="startGame()">
+      Start
+    </button>
+    <button id ="stopBtn" class="hidden" onclick="stopGame()">
+      Stop
+    </button>
+    </div>
+    
+    <div id="gameBtnArea">
+      <button id="gameBtn1" onmousedown="startTone(1)" onmouseup="stopTone()" onclick="guess(1)">A</button>
+      <button id="gameBtn2" onmousedown="startTone(2)" onmouseup="stopTone()" onclick="guess(2)">B</button>
+      <button id="gameBtn3" onmousedown="startTone(3)" onmouseup="stopTone()" onclick="guess(3)">C</button>
+      <button id="gameBtn4" onmousedown="startTone(4)" onmouseup="stopTone()" onclick="guess(4)">D</button>
+      <button id="gameBtn5" onmousedown="startTone(5)" onmouseup="stopTone()" onclick="guess(5)">E</button>
+      <button id="gameBtn6" onmousedown="startTone(6)" onmouseup="stopTone()" onclick="guess(6)">F</button>
+      <button id="gameBtn7" onmousedown="startTone(7)" onmouseup="stopTone()" onclick="guess(7)">G</button>
+    </div>
+    
+    <p id="wrongGuesses"></p>
+  
+    <div id="winImg">
+      <img src="https://cdn.glitch.com/982f2af5-6ee0-41b9-a4ee-8d5a08ca1ed9%2FdogWin.jpg?v=1616101331679" class="hidden" id="dogWin" width="460" height="300">
+    </div>
+      <p id ="winMsg" class="hidden"> You win! Press start to play again.</p>  
+    <div id="loseImg">
+      <img src="https://cdn.glitch.com/982f2af5-6ee0-41b9-a4ee-8d5a08ca1ed9%2FdogLose.jpg?v=1616101331010" class="hidden" id="dogLose" width="460" height="300">
+    </div>
+      <p id ="loseMsg" class="hidden">
+        You lose. Press start to play again.
+    </p>
+    
+  </body>
+</html>
